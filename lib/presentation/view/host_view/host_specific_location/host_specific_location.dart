@@ -7,6 +7,7 @@ import 'package:country_list_pick/support/code_country.dart';
 import 'package:country_state_city_picker/country_state_city_picker.dart';
 import 'package:country_state_picker/country_state_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../host_location_view/host_location_view.dart';
 
@@ -67,7 +68,6 @@ class _HostSpecificLocationViewBodyState
                   state = st;
                 }),
               ),
-
               10.sH,
               Text(
                 'STREET ADDRESS',
@@ -97,7 +97,7 @@ class _HostSpecificLocationViewBodyState
               Text(
                 'AIP/POSTAL CODE',
                 style:
-                context.textTheme.labelLarge!.copyWith(color: Colors.grey),
+                    context.textTheme.labelLarge!.copyWith(color: Colors.grey),
               ),
               8.sH,
               SizedBox(
@@ -106,7 +106,6 @@ class _HostSpecificLocationViewBodyState
                   keyboardType: TextInputType.number,
                   cursorColor: AppColors.kPrimaryColor,
                   decoration: InputDecoration(
-
                       isDense: true,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -120,10 +119,14 @@ class _HostSpecificLocationViewBodyState
                           .copyWith(color: Colors.grey)),
                 ),
               ),
-60.sH,
-              CustomButton(buttonText: 'Next', onTapped: (){
-                NavigationHelper.pushRoute(context, HostLocationViewBody());
-              }),
+
+
+              60.sH,
+              CustomButton(
+                  buttonText: 'Next',
+                  onTapped: () {
+                    NavigationHelper.pushRoute(context, HostLocationViewBody());
+                  }),
             ],
           ),
         ),

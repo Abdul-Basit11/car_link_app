@@ -16,6 +16,7 @@ class CustomTextField extends StatefulWidget {
   final bool isPrefixIcon;
   final VoidCallback? onTapped;
 
+
   CustomTextField({
     super.key,
     required this.hintText,
